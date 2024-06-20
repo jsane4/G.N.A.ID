@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    /* Background color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    /* Header background color */
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    width: 150px;
+    height: 100px;
+    border-radius: 30px;
+}
+
+header .search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .icons a {
+    margin-left: 20px;
+    position: relative;
+}
+
+header .icons a:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ccc;
+    /* Separator color */
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #000000;
+    /* Category background color */
+}
+
+.categories div {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.categories div a {
+    text-decoration: none;
+    color: #000;
+    /* Link color */
+    display: block;
+    /* Makes the whole div clickable */
+    width: 100%;
+    /* Ensures the link takes up the full div */
+    height: 100%;
+    /* Ensures the link takes up the full div */
+    background-color: inherit;
+    /* Inherit background color from parent */
+}
+
+.categories div:hover {
+    background-color: #808080;
+    /* Change background on hover */
+}
+
+.categories div a:hover {
+    color: #fff;
+    /* Change text color on hover */
+    background-color: inherit;
+    /* Inherit background color from parent */
+}
+
+.banner {
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+    /* Banner background color */
+    margin: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #ddd;
+    color: #000;
+    /* Text color */
+}
+
+footer div {
+    flex: 1;
+    text-align: center;
+}
+
+.bi-whatsapp {
+    color: #25D366;
+    font-size: 50px;
+}
+
+.bi-cart-fill,
+.bi-person-fill,
+.bi-list {
+    color: black;
+    font-size: 30px;
+}
+
+.icons i {
+    margin-right: 10px;
+}
+
+.icons i:not(:last-child) {
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-link {
+    color: #000000;
+}
+
+.bi-tiktok,
+.bi-facebook,
+.bi-instagram {
+    color: black;
+    font-size: 20px;
+    display: inline-block;
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    color: black;
+    /* Maintain black color */
+}
+
+/* Mengubah warna tombol Search menjadi hitam */
+.btn-outline-success {
+    color: #000;
+    border-color: #000;
+}
+
+.btn-outline-success:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Styles for the login/registration modal */
+.floating-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.floating-container .auth-forms {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.auth-forms form {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.auth-forms form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-forms form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-forms form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.auth-forms form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-forms form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-forms form button:hover {
+    background-color: #808080;
+}
+
+.auth-forms form .form-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.auth-forms form .form-footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.auth-forms form .form-footer a:hover {
+    text-decoration: underline;
+}
+
+.floating-container .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+.floating-container .close:hover {
+    color: darkred;
+}
+
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .search-bar form {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .search-bar input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            outline: none;
+        }
+        
+        .search-bar button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #000000;
+            color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .search-bar button[type="submit"]:hover {
+            background-color: #808080;
+        }
+		.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 14px;
+    color: #555;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
